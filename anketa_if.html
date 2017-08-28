@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> </title>
+        <script>
+        var surname, name, lastname, age, sex, gender;
+        surname=prompt("Напишите вашу фамилию");
+        name=prompt("Напишите ваше имя");
+        lastname=prompt("Напишите ваше отчество");
+        age=prompt("Напишите ваш возраст");
+        gender=confirm("Ваш пол - мужской?"); 
+        
+        if ((surname!="")&&(surname!=null)&&(name!="")&&(name!=null)&&(lastname!="")&&(lastname!=null)&&(Number(age)>0)&&(age!="")&&(age!=null)&&(isNaN(age)==false)&&(gender==true)&&(Number(age)>=60)){
+           alert("Ваше ФИО: " + surname + " " + name + " " + lastname + "\nваш возраст в годах: "+age + "\nваш возраст в днях: "+(Number(age)*365)+"\nваш пол: мужской" + "\nвы на пенсии: да");
+        } 
+        else if ((surname!="")&&(surname!=null)&&(name!="")&&(name!=null)&&(lastname!="")&&(lastname!=null)&&(Number(age)>0)&&(age!="")&&(age!=null)&&(isNaN(age)==false)&&(gender==false)&&(Number(age)<55)){
+           alert("Ваше ФИО: " + surname + " " + name + " " + lastname + "\nваш возраст в годах: "+age + "\nваш возраст в днях: "+(Number(age)*365)+"\nваш пол: женский" + "\nвы на пенсии: нет");
+        }
+        else  if ((surname!="")&&(surname!=null)&&(name!="")&&(name!=null)&&(lastname!="")&&(lastname!=null)&&(Number(age)>0)&&(age!="")&&(age!=null)&&(isNaN(age)==false)&&(gender==true)&&(Number(age)<60)){
+           alert("Ваше ФИО: " + surname + " " + name + " " + lastname + "\nваш возраст в годах: "+age + "\nваш возраст в днях: "+(Number(age)*365)+"\nваш пол: мужской" + "\nвы на пенсии: нет");
+        } 
+        else if ((surname!="")&&(surname!=null)&&(name!="")&&(name!=null)&&(lastname!="")&&(lastname!=null)&&(Number(age)>0)&&(age!="")&&(age!=null)&&(isNaN(age)==false)&&(gender==false)&&(Number(age)>=55)){
+           alert("Ваше ФИО: " + surname + " " + name + " " + lastname + "\nваш возраст в годах: "+age + "\nваш возраст в днях: "+(Number(age)*365)+"\nваш пол: женский" + "\nвы на пенсии: да");
+        }
+        else {
+            alert("Error! Try again!");
+        }
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

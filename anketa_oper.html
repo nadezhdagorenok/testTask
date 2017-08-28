@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> </title>
+        <script>
+        var surname, name, lastname, age, gender;
+        surname=prompt("Напишите вашу фамилию");
+        name=prompt("Напишите ваше имя");
+        lastname=prompt("Напишите ваше отчество");
+        age=prompt("Напишите ваш возраст");
+        gender=confirm("Ваш пол - мужской?"); 
+        var anketa = ((surname!="")&&(surname!=null)&&(name!="")&&(name!=null)&&(lastname!="")&&(lastname!=null)&&(+age>0)&&(age!="")&&(age!=null)&&(isNaN(age)==false)&&(gender==true)&&(Number(age)>=60)) ? ("ваше ФИО: " + surname + " " + name + " " + lastname + "\nваш возраст в годах: "+age + "\nваш возраст в днях: "+(Number(age)*365)+"\nваш пол: мужской" + "\nвы на пенсии: да"):
+                     ((surname!="")&&(surname!=null)&&(name!="")&&(name!=null)&&(lastname!="")&&(lastname!=null)&&(+age>0)&&(age!="")&&(age!=null)&&(isNaN(age)==false)&&(gender==false)&&(Number(age)<55)) ? ("ваше ФИО: " + surname + " " + name + " " + lastname + "\nваш возраст в годах: "+age + "\nваш возраст в днях: "+(Number(age)*365)+"\nваш пол: женский" + "\nвы на пенсии: нет"):
+                     ((surname!="")&&(surname!=null)&&(name!="")&&(name!=null)&&(lastname!="")&&(lastname!=null)&&(+age>0)&&(age!="")&&(age!=null)&&(isNaN(age)==false)&&(gender==true)&&(Number(age)<60)) ? ("Ваше ФИО: " + surname + " " + name + " " + lastname + "\nваш возраст в годах: "+age + "\nваш возраст в днях: "+(Number(age)*365)+"\nваш пол: мужской" + "\nвы на пенсии: нет"):
+                     ((surname!="")&&(surname!=null)&&(name!="")&&(name!=null)&&(lastname!="")&&(lastname!=null)&&(+age>0)&&(age!="")&&(age!=null)&&(isNaN(age)==false)&&(gender==false)&&(Number(age)>=55)) ? ("Ваше ФИО: " + surname + " " + name + " " + lastname + "\nваш возраст в годах: "+age + "\nваш возраст в днях: "+(Number(age)*365)+"\nваш пол: женский" + "\nвы на пенсии: да"):
+                     ("Fill all fields! Try again!");
+        alert(anketa);
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

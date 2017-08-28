@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> </title>
+        <script>
+            
+        </script>
+    </head>
+    <body>
+        <style>
+            input {
+              width: 300px;
+              height:100px;
+              background: #ff0;
+              border-radius: 15px;
+              box-shadow: 1px 2px 1px black;
+              cursor: pointer;
+              font-size: 18px;
+              transition: 2s;
+            }
+            input:hover{
+                background: green;
+                color: #fff;
+                
+            }
+            input:active{
+               transform: scale(0.5);
+            }
+        </style>
+        <script>
+            console.log = alert;
+            function GetText() {
+               do {
+                   var str = prompt('Введите произвольный текст', 'ваш текст');
+                   if (str == '') {
+                       alert('Пустая строка! Попробуйте еще раз!');
+                   }
+                   else if (str == null) {
+                       alert('Отмена ввода!'); break;
+                   }
+               } 
+            
+               while (!str);
+               
+               var arr = str.split(' ');
+               
+               var arrNew = [];
+               for (var i =0; i < 3; i++){
+                   arrNew[i] = getMaxElement(arr);
+                   
+                   arr.splice(arr.indexOf(arrNew[i]), 1);
+               }
+               str = arrNew.join('; ')
+               alert(str);
+               
+               function getMaxElement(arr) {
+                   var max = '';
+                   for (var i = 0; i < arr.length; i++) {
+                   if (max.length < arr[i].length) {
+                       max = arr[i];
+                       
+                   }
+                   }
+                   return max;
+                   
+               }
+               
+               
+            }
+            
+        </script>
+        <input type='button' value='ввод произвольного текста' onclick='GetText()'>
+
+    </body>
+</html>
